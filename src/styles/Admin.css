@@ -1,0 +1,88 @@
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+.stat-number {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  margin: 4px 0 0;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.add-user-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+
+.add-user-form input,
+.add-user-form select {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.add-user-form input:focus,
+.add-user-form select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.users-table th,
+.users-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.users-table th {
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.role-badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-transform: capitalize;
+}
+
+.role-admin {
+  background: rgba(79, 70, 229, 0.12);
+  color: var(--color-primary);
+}
+
+.role-user {
+  background: rgba(34, 160, 107, 0.12);
+  color: var(--color-success);
+}

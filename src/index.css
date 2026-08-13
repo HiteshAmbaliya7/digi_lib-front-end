@@ -1,0 +1,129 @@
+/* ==========================================================
+   GLOBAL STYLES & THEME VARIABLES
+   Edit the values below to quickly re-theme the whole app.
+   ========================================================== */
+:root {
+  --color-primary: #1430b8;
+  --color-primary-dark: #2566a7;
+  --color-bg: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-text: #1f2330;
+  --color-text-light: #6b7280;
+  --color-border: #e2e4eb;
+  --color-danger: #b46155;
+  --color-success: #22a06b;
+
+  --radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+button {
+  font-family: inherit;
+}
+
+.app-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.error-text {
+  color: var(--color-danger);
+  font-size: 0.9rem;
+  margin: 6px 0 0;
+}
+
+.success-text {
+  color: var(--color-success);
+  font-size: 0.9rem;
+  margin: 6px 0 0;
+}
+
+/* Fade-in animation used across pages for a smoother feel */
+.fade-in {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
